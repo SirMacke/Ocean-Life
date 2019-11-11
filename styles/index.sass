@@ -161,21 +161,22 @@ html, body
         opacity: 0.75
 
     #container
-      display: flex
-      flex-direction: column
+      display: grid
+      grid-template-rows: 1fr 1fr
       position: relative
       width: 50%
       height: auto
-      margin: 50px 0px
+      margin: 100px 0px
 
       .text
         position: relative
         width: 75%
         height: auto
+        top: 50%
         left: 50%
-        transform: translateX(-50%)
+        transform: translate(-50%, -50%)
         color: black
-        margin: 50px 0px
+        margin: 25px 0px
 
         h5
           color: white
@@ -371,12 +372,13 @@ html, body
             height: 2.5px
             left: 50%
             transform: translateX(-50%)
-            margin: 25px 0px
+            margin: 25px 0px 0px 0px
             background-color: #01cbe1
 
           .action
             display: flex
             flex-direction: row
+            margin-top: 15px
 
             .icon
               position: relative
@@ -389,10 +391,10 @@ html, body
               i
                 position: relative
                 left: 50%
-                top: 50%
+                top: 49%
                 transform: translate(-50%, -50%)
                 padding: 0px
-                margin: 0px 0px 1.5px 0.5px
+                margin: 0px 0px 0px 0.5px
                 font-size: 1.1em
 
             p
@@ -479,7 +481,7 @@ html, body
 
         p
           position: relative
-          margin: 25px 0px 75px 0px
+          margin: 25px 0px 90px 0px
           font-size: 1.25em
           color: #003755
           text-align: center
@@ -494,7 +496,7 @@ html, body
           bottom: 35px
           left: 50%
           transform: translateX(-50%)
-          margin: 25px 0px
+          margin: 25px 0px 30px 0px
           background-color: #01cbe1
 
         .action
@@ -502,30 +504,37 @@ html, body
           flex-direction: row
           position: absolute
           height: 50px
+          width: 100%
           bottom: 0px
 
           .icon
             position: relative
             width: 35px
             height: 35px
-            left: 25px
+            left: 35px
             background-color: #01cbe1
             border-radius: 25px
 
             i
               position: relative
               left: 50%
-              top: 50%
+              top: 45%
               transform: translate(-50%, -50%)
               padding: 0px
-              margin: 0px 0px 1.5px 0.5px
+              margin: 0px 0px 0px 0.5px
               font-size: 1.1em
 
           p
             position: relative
-            margin-left: 35px
-            top: -7.5px
-            font-size: 1em
+            left: 110px
+            font-size: 1.1em
+            margin: 0px
+            color: #003755
+            text-align: left
+            width: auto
+            left: 50px
+            top: 5px
+            transform: translateX(0%)
 
 
   #partners
@@ -632,14 +641,14 @@ html, body
           width: 400px
           height: 40px
           color: #003755
-          border: 2.5px solid #01cbe1
+          border: 5px solid #01cbe1
           padding-left: 10px
           background: white
 
         button
           position: relative
-          height: 47.5px
-          width: 47.5px
+          height: 52.5px
+          width: 52.5px
           margin-left: 0px
           background: #01cbe1
           border: 2.5px solid #01cbe1
@@ -653,6 +662,14 @@ html, body
             font-size: 2em
             margin: 0px
             padding: 0px
+            transition: 0.25s
+
+        button:focus
+          outline: none
+
+        button:active
+          i
+            font-size: 2.25em
 
     #link-container
       display: grid
